@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		233A733AE331F9184008C183 /* Pods_testWebViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E546F853A51BBCDBB15C322 /* Pods_testWebViewTests.framework */; };
+		571D4BCD1D2227B600F01388 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4BCB1D2227B600F01388 /* TestTableViewCell.m */; };
+		571D4BCE1D2227B600F01388 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571D4BCC1D2227B600F01388 /* TestTableViewCell.xib */; };
+		571D4BD21D22282800F01388 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4BD11D22282800F01388 /* UIResponder+Router.m */; };
 		5735EFD61BEC52A90045AD0C /* RMADAddressBookTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5735EFD51BEC52A90045AD0C /* RMADAddressBookTitleView.m */; };
 		5754D0391C61DB9800709C4E /* TestBoltsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5754D0381C61DB9800709C4E /* TestBoltsViewController.m */; };
 		5754D03D1C647B8B00709C4E /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5754D03C1C647B8B00709C4E /* TestTableViewController.m */; };
@@ -78,6 +81,11 @@
 		4E57872D1727A99E8F457A7F /* Pods-testWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testWebView.release.xcconfig"; path = "Pods/Target Support Files/Pods-testWebView/Pods-testWebView.release.xcconfig"; sourceTree = "<group>"; };
 		509211B31F8B4553126FBAD2 /* Pods-testWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testWebView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testWebView/Pods-testWebView.debug.xcconfig"; sourceTree = "<group>"; };
 		5482065C640F59677DB37500 /* Pods-testWebViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testWebViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testWebViewUITests/Pods-testWebViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		571D4BCA1D2227B600F01388 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		571D4BCB1D2227B600F01388 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		571D4BCC1D2227B600F01388 /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		571D4BD01D22282800F01388 /* UIResponder+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
+		571D4BD11D22282800F01388 /* UIResponder+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
 		5735EFD41BEC52A90045AD0C /* RMADAddressBookTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMADAddressBookTitleView.h; sourceTree = "<group>"; };
 		5735EFD51BEC52A90045AD0C /* RMADAddressBookTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMADAddressBookTitleView.m; sourceTree = "<group>"; };
 		5754D0371C61DB9800709C4E /* TestBoltsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBoltsViewController.h; sourceTree = "<group>"; };
@@ -208,6 +216,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		571D4BCF1D22282800F01388 /* UIResponder+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				571D4BD01D22282800F01388 /* UIResponder+Router.h */,
+				571D4BD11D22282800F01388 /* UIResponder+Router.m */,
+			);
+			path = "UIResponder+Extend";
+			sourceTree = "<group>";
+		};
 		577A21F41C3119D90092C7CB /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +304,7 @@
 		57D86A481BDDF7DD0000BC83 /* testWebView */ = {
 			isa = PBXGroup;
 			children = (
+				571D4BCF1D22282800F01388 /* UIResponder+Extend */,
 				577A22001C311E1E0092C7CB /* 1231.txt */,
 				577A22341C312F9B0092C7CB /* footer.txt */,
 				577A22351C312F9B0092C7CB /* header.txt */,
@@ -318,6 +336,9 @@
 				57A7DC651C5EF6EC005B5A57 /* DismissAnimation.m */,
 				577408CF1C5CB74200E2E63C /* CircleView.h */,
 				577408D01C5CB74200E2E63C /* CircleView.m */,
+				571D4BCA1D2227B600F01388 /* TestTableViewCell.h */,
+				571D4BCB1D2227B600F01388 /* TestTableViewCell.m */,
+				571D4BCC1D2227B600F01388 /* TestTableViewCell.xib */,
 				5735EFD41BEC52A90045AD0C /* RMADAddressBookTitleView.h */,
 				5735EFD51BEC52A90045AD0C /* RMADAddressBookTitleView.m */,
 				57D86A551BDDF7DD0000BC83 /* Assets.xcassets */,
@@ -477,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D86A591BDDF7DD0000BC83 /* LaunchScreen.storyboard in Resources */,
+				571D4BCE1D2227B600F01388 /* TestTableViewCell.xib in Resources */,
 				577A22011C311E1E0092C7CB /* 1231.txt in Resources */,
 				57D86A561BDDF7DD0000BC83 /* Assets.xcassets in Resources */,
 				577A21FC1C3119D90092C7CB /* WebViewJavascriptBridge.js.txt in Resources */,
@@ -651,7 +673,9 @@
 				577A21FE1C3119D90092C7CB /* WebViewJavascriptBridgeBase.m in Sources */,
 				577A222F1C3126670092C7CB /* UIImage+MultiFormat.m in Sources */,
 				57A7DC661C5EF6EC005B5A57 /* DismissAnimation.m in Sources */,
+				571D4BCD1D2227B600F01388 /* TestTableViewCell.m in Sources */,
 				577A21FF1C3119D90092C7CB /* WKWebViewJavascriptBridge.m in Sources */,
+				571D4BD21D22282800F01388 /* UIResponder+Router.m in Sources */,
 				577A22261C3126670092C7CB /* SDImageCache.m in Sources */,
 				5754D0961C745D8500709C4E /* AViewController.m in Sources */,
 				57D86A4B1BDDF7DD0000BC83 /* main.m in Sources */,

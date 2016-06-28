@@ -33,10 +33,10 @@
     
 //    self.window.rootViewController = self.tabVC;
     
-    ViewController *vc = [[ViewController alloc] init];
+//    ViewController *vc = [[ViewController alloc] init];
     
 //    HomeViewController *vc = [[HomeViewController alloc] init];
-//    TestTableViewController *vc = [[TestTableViewController alloc] init];
+    TestTableViewController *vc = [[TestTableViewController alloc] init];
     
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
     

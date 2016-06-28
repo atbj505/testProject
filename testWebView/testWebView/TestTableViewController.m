@@ -7,6 +7,8 @@
 //
 
 #import "TestTableViewController.h"
+#import "UIResponder+Router.h"
+#import "TestTableViewCell.h"
 
 @interface TestTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -26,7 +28,8 @@
     [self.tableView setContentInset:UIEdgeInsetsMake(300, 0, 0, 0)];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
+//    [self.tableView registerClass:[TestTableViewCell class] forCellReuseIdentifier:identifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TestTableViewCell" bundle:nil] forCellReuseIdentifier:identifier];
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -150, self.view.bounds.size.width, 300)];
     self.imageView.image = [UIImage imageNamed:@"1.png"];
@@ -88,9 +91,14 @@
 static NSString *identifier = @"identifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.titleView.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     return cell;
+}
+
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ViewController中捕获" message:userInfo[@"object"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alertView show];
 }
 
 @end
